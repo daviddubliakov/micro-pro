@@ -31,18 +31,7 @@ const nextConfig = {
         //   automaticAsyncBoundary: true,
         // },
         exposes: {},
-        shared: {
-          '@emotion/': {
-            eager: true,
-            requiredVersion: false,
-            singleton: true,
-          },
-          '@chakra-ui/': {
-            eager: true,
-            requiredVersion: false,
-            singleton: true,
-          },
-        },
+        shared: {},
       }),
     );
 

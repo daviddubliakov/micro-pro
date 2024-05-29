@@ -24,26 +24,15 @@ const nextConfig = {
           './test/two': './pages/test/two.js',
           './test/three': './pages/test/three.js',
         },
-        shared: {
-          '@emotion/': {
-            eager: true,
-            requiredVersion: false,
-            singleton: true,
-          },
-          '@chakra-ui/': {
-            eager: true,
-            requiredVersion: false,
-            singleton: true,
-          },
-        },
+        shared: {},
         extraOptions: {
-          exposePages: true
+          exposePages: true,
         },
-      })
+      }),
     );
 
     return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

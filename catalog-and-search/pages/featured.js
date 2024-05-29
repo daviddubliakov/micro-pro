@@ -1,27 +1,24 @@
-import { Box, Heading, Stack } from '@chakra-ui/react'
-import Product from '@/components/product'
+import Product from '@/components/product';
 
 export function Featured({ test }) {
   return (
-    <Box py='24px'>
-      <Heading as='h3' size='lg' textAlign='center'>
-        Featured products
-      </Heading>
-      <Stack direction={['column', 'row']} spacing='24px' align='center' justify='center'>
+    <div>
+      <h3>Featured products</h3>
+      <div>
         {test.map((item) => (
           <Product key={item} />
         ))}
-      </Stack>
-    </Box>
-  )
+      </div>
+    </div>
+  );
 }
 
 export async function getServerSideProps({ query }) {
-  const test = Date.now() % 2 === 0 ? [1,2,3] : [1,2,3,4]
+  const test = Date.now() % 2 === 0 ? [1, 2, 3] : [1, 2, 3, 4];
   return {
     props: {
       test,
     },
   };
 }
-export default Featured
+export default Featured;
