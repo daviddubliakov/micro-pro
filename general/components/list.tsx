@@ -1,5 +1,5 @@
 // Replace test data with your own
-const features = Array.apply(null, Array(8)).map(function (x, i) {
+const features = Array.apply(null, Array(8)).map(function (_x, i) {
   return {
     id: i,
     title: 'Lorem ipsum dolor sit amet',

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import GridListWithHeading from '@/components/list';
-import StatsTitleDescription from '@/components/stats';
+import GridListWithHeading from '../components/list';
+import StatsTitleDescription from '../components/stats';
 
 export default function Orders() {
   return (

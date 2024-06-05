@@ -1,12 +1,13 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 
-const SHOP_APP_URL =
-  process.env.NEXT_PUBLIC_SHOP_APP_URL || 'http://localhost:3002';
+const CATALOG_SEARCH_APP_URL =
+  process.env.NEXT_PUBLIC_CATALOG_SEARCH_APP_URL || 'http://localhost:3002';
 
 const remotes = (isServer) => {
   const location = isServer ? 'ssr' : 'chunks';
   return {
-    shop: `shop@${SHOP_APP_URL}/_next/static/${location}/remoteEntry.js`,
+    catalogSearch:
+      'catalogSearch@http://localhost:3002/_next/static/chunks/remoteEntry.js',
   };
 };
 
@@ -24,14 +25,17 @@ const nextConfig = {
   webpack(config, { isServer }) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'layout',
+        name: 'general',
         filename: 'static/chunks/remoteEntry.js',
         remotes: remotes(isServer),
-        // extraOptions: {
-        //   automaticAsyncBoundary: true,
-        // },
         exposes: {},
-        shared: {},
+        shared: {
+          '@antd/': {
+            eager: true,
+            requiredVersion: false,
+            singleton: true,
+          },
+        },
       }),
     );
 

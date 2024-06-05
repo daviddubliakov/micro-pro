@@ -14,17 +14,20 @@ const nextConfig = {
   webpack(config, { isServer }) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'shop',
-        filename: 'static/chunks/remoteEntry.js',
+        name: 'catalogSearch',
+        filename: 'static/chunks/remoteEntry.tsx',
         remotes: {},
         exposes: {
-          './Featured': './pages/featured.js',
-          './Search': './pages/search.js',
-          './test/one': './pages/test/one.js',
-          './test/two': './pages/test/two.js',
-          './test/three': './pages/test/three.js',
+          './Featured': './pages/featured.tsx',
+          './Search': './pages/search.tsx',
         },
-        shared: {},
+        shared: {
+          '@antd/': {
+            eager: true,
+            requiredVersion: false,
+            singleton: true,
+          },
+        },
         extraOptions: {
           exposePages: true,
         },

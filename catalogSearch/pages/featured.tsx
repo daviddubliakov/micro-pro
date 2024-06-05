@@ -1,13 +1,14 @@
-import Product from '@/components/product';
+// import { Box } from 'antd';
+import Product from '../components/product';
 
-export function Featured({ test }) {
+export function Featured() {
   return (
     <div>
       <h3>Featured products</h3>
       <div>
-        {test.map((item) => (
-          <Product key={item} />
-        ))}
+        <Product key={1} />
+        <Product key={2} />
+        <Product key={3} />
       </div>
     </div>
   );

@@ -11,6 +11,7 @@
   "dependencies": {
     "@module-federation/nextjs-mf": "6.4.0",
     "@module-federation/utilities": "1.7.3",
+    "antd": "^5.17.4",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
@@ -18,6 +19,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/react": "18.3.3",
+    "typescript": "5.4.5",
     "webpack": "^5.76.2"
   }
 }
