@@ -10,7 +10,7 @@
       }
     ],
     "paths": {
-      "catalogSearch/*": ["./node_modules/catalogSearch/*"]
+      "@mf-types/*": ["./@mf-types/*"]
     },
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext", "esnext.asynciterable"],

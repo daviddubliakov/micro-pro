@@ -15,7 +15,7 @@ const nextConfig = {
     config.plugins.push(
       new NextFederationPlugin({
         name: 'catalogSearch',
-        filename: 'static/chunks/remoteEntry.tsx',
+        filename: 'static/chunks/remoteEntry.js',
         remotes: {},
         exposes: {
           './Featured': './pages/featured.tsx',

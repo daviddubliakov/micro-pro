@@ -10,12 +10,12 @@ const Search = dynamic(
   },
 );
 
-// const Featured = dynamic(
-//   () => import('catalogSearch/Featured').then((mod) => mod.Featured),
-//   {
-//     ssr: true,
-//   },
-// );
+const Featured = dynamic(
+  () => import('catalogSearch/Featured').then((mod) => mod.Featured),
+  {
+    ssr: true,
+  },
+);
 
 export function Home() {
   return (
@@ -29,7 +29,7 @@ export function Home() {
       <main>
         <Search />
         <Nav />
-        {/* <Featured /> */}
+        <Featured />
       </main>
     </>
   );
