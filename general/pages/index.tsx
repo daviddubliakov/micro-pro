@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-import Nav from '../components/nav';
+import { Navigation } from '../components/Navigation';
 
 const Search = dynamic(
   () => import('catalogSearch/Search').then((mod) => mod.Search),
@@ -28,7 +28,7 @@ export function Home() {
       </Head>
       <main>
         <Search />
-        <Nav />
+        <Navigation />
         <Featured />
       </main>
     </>

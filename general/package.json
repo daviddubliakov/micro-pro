@@ -14,12 +14,17 @@
     "antd": "^5.17.4",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "less-loader": "^12.2.0",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "devDependencies": {
     "@types/react": "18.3.3",
+    "less": "^4.2.0",
+    "next-with-less": "^3.0.1",
+    "postcss-less": "^6.0.0",
     "typescript": "5.4.5",
     "webpack": "^5.76.2"
   }

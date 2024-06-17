@@ -37,7 +37,7 @@ class MyDocument extends Document {
         <Head>
           <FlushedChunks chunks={this.props.chunks} />
         </Head>
-        <body>
+        <body style={{ margin: 0 }}>
           <Main />
           <NextScript />
         </body>

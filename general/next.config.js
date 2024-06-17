@@ -1,4 +1,5 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
+const withLess = require('next-with-less');
 
 const CATALOG_SEARCH_APP_URL =
   process.env.NEXT_PUBLIC_CATALOG_SEARCH_APP_URL || 'http://localhost:3002';
@@ -15,6 +16,11 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     esmExternals: false,
+  },
+  lessLoaderOptions: {
+    lessOptions: {
+      javascriptEnabled: true,
+    },
   },
   /**
    *
@@ -42,4 +48,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withLess(nextConfig);
