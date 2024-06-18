@@ -1,10 +1,16 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
+const withLess = require('next-with-less');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
     esmExternals: false,
+  },
+  lessLoaderOptions: {
+    lessOptions: {
+      javascriptEnabled: true,
+    },
   },
   /**
    *
@@ -38,4 +44,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withLess(nextConfig);

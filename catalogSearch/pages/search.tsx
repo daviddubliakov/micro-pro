@@ -1,4 +1,4 @@
-import SearchComponent from '../components/search';
+import { Search as SearchComponent } from '../components/Search';
 
 export function Search() {
   return <SearchComponent />;
