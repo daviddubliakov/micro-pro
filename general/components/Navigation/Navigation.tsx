@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { HomeFilledIcon } from '../icons';
 
 import st from './styles.module.less';
@@ -17,7 +18,7 @@ export const Navigation = () => {
       <ul className={st.list}>
         {LINKS.map((item) => (
           <li key={item.id} className={st.item}>
-            <span>{item.icon || item.label}</span>
+            <Link href={item.href}>{item.icon || item.label}</Link>
           </li>
         ))}
       </ul>

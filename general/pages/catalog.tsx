@@ -10,11 +10,18 @@ const Search = dynamic(
   },
 );
 
-export function Dashboard() {
+const Categories = dynamic(
+  () => import('catalogSearch/Categories').then((mod) => mod.Categories),
+  {
+    ssr: true,
+  },
+);
+
+export default function Orders() {
   return (
     <>
       <Head>
-        <title>Dashboard</title>
+        <title>Catalog</title>
         <meta name='description' content='Created by Davyd Dubliakov' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
@@ -22,10 +29,8 @@ export function Dashboard() {
       <main>
         <Search />
         <Navigation />
-        <h2>Dashboard</h2>
+        <Categories />
       </main>
     </>
   );
 }
-
-export default Dashboard;

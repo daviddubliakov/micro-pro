@@ -24,7 +24,7 @@ const nextConfig = {
         filename: 'static/chunks/remoteEntry.js',
         remotes: {},
         exposes: {
-          './Featured': './pages/featured.tsx',
+          './Categories': './pages/categories.tsx',
           './Search': './pages/search.tsx',
         },
         shared: {
